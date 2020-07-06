@@ -32,8 +32,8 @@ programa
 		escreva("\nDigite o tempo de duração do evento em segundos: ")
 		leia(tempo_segundos)
 
-		horas = tempo_segundos / 60
-		minutos = tempo_segundos / 3600
+		horas = tempo_segundos / 3600
+		minutos = tempo_segundos / 60
 
 		escreva("\nTempo do evento em horas: ", horas, " e em minutos ", minutos)
 
@@ -101,7 +101,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 410; 
+ * @POSICAO-CURSOR = 786; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
