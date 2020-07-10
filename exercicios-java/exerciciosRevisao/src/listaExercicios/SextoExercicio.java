@@ -14,7 +14,6 @@ public class SextoExercicio {
 		
 		//Populando vetor...
 		for (int i = 0; i < vetor.length; i++) {
-			//vetor[i] = randNum.nextInt(10);
 			System.out.println("Digite um valor para o vetor");
 			vetor[i] = leitura.nextInt();
 		}
@@ -22,18 +21,18 @@ public class SextoExercicio {
 		//Populando matriz...
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz.length; j++) {
-				//matriz[i][j] = randNum.nextInt(10);
 				System.out.println("Digite um valor para a matriz");
 				matriz[i][j] = leitura.nextInt();
 			}
 		}
 		
 		//Multiplicação do vetor com as colunas da matriz
-		
-		
-		//Exibir resultado da multiplicação
-		
-		
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				matrizMult[i][j] = vetor[i] * matriz[j][i];
+				System.out.println("\n"+matrizMult[i][j]);
+			}
+		}
 		
 		/* ###################################### */
 	}

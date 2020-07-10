@@ -14,7 +14,7 @@ public class SegundoExercicio {
 		System.out.println("\nDigite sua altura: ");
 		altura = leitura.nextDouble();
 		
-		imc = peso / (altura * 2);
+		imc = peso / (altura * altura);
 		
 		if(imc < 18.50) {
 			System.out.println("\nAbaixo do peso.");	
