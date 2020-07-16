@@ -3,8 +3,14 @@ package exerciciosCollections;
 import java.awt.List;
 
 public class Principal {
+	
+	public static void listarEstoque(String[] param) {
+		for(String item: param) {
+			System.out.println("\n"+item);
+		}
+	}
+	
 	public static void main(String args[]) {
-		
 		int opcao;
 		
 		List estoque = new List();
@@ -27,10 +33,6 @@ public class Principal {
 		
 		//Apresentar todos os dados da list.
 		String[] items = estoque.getItems();
-		
-		for(String item: items) {
-			System.out.println("\n"+item);
-		}
-		
+		listarEstoque(items);
 	}
 }
