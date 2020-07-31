@@ -36,6 +36,12 @@ public class TurmaController {
 		return repository.findById(id).map(response -> ResponseEntity.ok(response)).orElse(ResponseEntity.notFound().build());
 	}
 	
+	@GetMapping("/turma/{turma}")
+	public ResponseEntity<List<Turma>> GetByTurma(@PathVariable String turma){
+		return ResponseEntity.ok(repository.findAllByTurmaContainingIgnoreCase(turma));
+	}
+	
+	
 	@PostMapping("/criar-turma")
 	public ResponseEntity<Turma> Post(@RequestBody Turma turma){
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(turma));

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.atividadespring.MinhaEscolaV2.model.Aluno;
+import com.atividadespring.MinhaEscolaV2.model.Turma;
 import com.atividadespring.MinhaEscolaV2.repository.AlunoRepository;
 
 @RestController
@@ -34,6 +35,11 @@ public class AlunoController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Aluno> GetById(@PathVariable Long id){
 		return repository.findById(id).map(response -> ResponseEntity.ok(response)).orElse(ResponseEntity.notFound().build());
+	}
+	
+	@GetMapping("/aluno/{aluno}")
+	public ResponseEntity<List<Aluno>> GetByAluno(@PathVariable String aluno){
+		return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(aluno));
 	}
 	
 	@PostMapping("/criar-aluno")
