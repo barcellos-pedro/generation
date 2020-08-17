@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    margin: 0;
+}
+
 .titulo{
     text-align: center;
+}
+
+.titulo-video{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 10px;
 }
 
 .container{
@@ -13,19 +24,23 @@
     font-size: 20px;
 }
 
-#menu li{
-    display: inline;
+header{
+    display: flex;
+    justify-content: space-around;
     padding: 15px;
+    border-bottom: 1px solid lightgray;
 }
 
-#menu li a{
+header a{
     font-size: 20px;
     text-decoration: none;
     color: black;
 }
 
-#menu li a:hover{
+header a:hover{
     color: gray;
+    text-decoration: underline;
+    font-size: 21px;
 }
 
 .div-texto-1{
@@ -40,6 +55,40 @@
     border-radius: 50%;
 }
 
+iframe{
+    padding-right: 20px;
+}
+
+#call-to-action{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+#call-to-action a{
+    text-decoration: none;
+    color: black;
+}
+
+#call-to-action a:hover{
+    font-size: 35px;
+}
+
+#letra-musica{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+#genius-link{
+    color: #FAD211;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rg_embed_link{
+    margin-bottom: 80px;
+}
+
 .div-video{
     margin-bottom: 50px;
 }
@@ -50,15 +99,82 @@
 }
 
 .rede-social-img{
-    width: 50px;
-    height: 50px;
-    padding: 30px;
+    width: 25px;
+    height: 25px;
+    padding: 20px 20px 0px 20px;
 }
+
+/* CSS da página contato */
 
 .mapa{
     margin-left: 50px;
 }
 
 .container-contato{
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#iphone{
+    width: 380px;
+}
+
+#formulario{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    width: 50%;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: 1px solid lightblue;
+    color: #6F8B94;
+    font-size: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: lightblue;
+    color: white;
+}
+
+button img{
+    padding-left: 10px;
+    width: 15px;
+    align-self: center;
+}
+
+.div-campo{
+    width: 80%;
+    padding: 10px 0 10px 0;
+}
+
+#nome, #email, #assunto{
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 15px;
+}
+
+#nome, #email, #assunto:focus{
+    outline: none;
+}
+
+#nome, #email, #assunto::placeholder{
+    font-style: italic;
+}
+
+label{
+    font-size: 20px;
 }
