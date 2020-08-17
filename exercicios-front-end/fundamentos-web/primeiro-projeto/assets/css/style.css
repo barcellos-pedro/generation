@@ -1,0 +1,64 @@
+.titulo{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .div-texto-1 > p{
+    text-align: justify;
+    font-size: 20px;
+}
+
+#menu li{
+    display: inline;
+    padding: 15px;
+}
+
+#menu li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#menu li a:hover{
+    color: gray;
+}
+
+.div-texto-1{
+    padding: 30px;
+}
+
+.div-imagem{
+    padding: 30px;
+}
+
+.imagem{
+    border-radius: 50%;
+}
+
+.div-video{
+    margin-bottom: 50px;
+}
+
+#texto-footer{
+    font-size: 20px;
+    text-align: center;
+}
+
+.rede-social-img{
+    width: 50px;
+    height: 50px;
+    padding: 30px;
+}
+
+.mapa{
+    margin-left: 50px;
+}
+
+.container-contato{
+    margin-bottom: 50px;
+}
