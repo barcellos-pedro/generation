@@ -1,0 +1,17 @@
+body{
+    background-image: url("/assets/images/body-background.png");
+}
+
+.img{
+    background-image: url("/assets/images/logo.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+footer{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 100px;
+}
