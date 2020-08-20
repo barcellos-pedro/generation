@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+body{
+    padding: 0 54px;
+    margin: 0;
+}
+
+h1, h2, h3, a, p, label, button, select, option{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ## HEADER ## */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 22px;
+}
+
+header div img{
+    width: 180px;
+    height: 74;
+}
+
+header #links{
+    width: 80%;
+}
+
+header #links ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header #links a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#generation, #curso, #curriculo, #mercado, #participe{
+    width: auto;
+}
+
+/* ## A GENERATION ## */
+#generation h2{
+    letter-spacing: 5px;
+    color: #0074B9;
+    font-size: 42px;
+}
+
+#generation p{
+    font-size: 22px;
+    width: 597px;
+}
+
+#generation .container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#generation-div-texto{
+    width: 597px;
+}
+
+#generation #generation-div-imagem {
+    background-image: url("https://i.imgur.com/8geMcyw.jpg");
+    background-size: cover;
+    width: 625px;
+    height: 412px;
+    border-radius: 5px;
+}
+
+/* ## CURSO ## */
+
+#curso{
+    margin-top: 0;
+}
+
+#curso .container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#curso h2{
+    font-size: 42px;
+    color: #9D8C09;
+    text-align: end;
+}
+
+#curso p{
+    font-size: 22px;
+    width: 632px;
+}
+
+#curso #curso-div-imagem{
+    background-image: url("https://i.imgur.com/DsIdnMR.jpg");
+    background-size: cover;
+    width: 605px;
+    height: 412px;
+    border-radius: 5px;
+}
+
+#curso #curso-div-texto{
+    display: flex;
+    flex-direction: column;
+    width: 632px;
+}
+
+#curso p{
+    text-align: right;
+}
+
+#video{
+    margin-top: 100px;
+    width: 1010;
+    height: 569;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+iframe{
+    border-radius: 10px;
+}
+
+/* ## CURRICULO ## */
+
+#curriculo{
+    margin-top: 100px;
+}
+
+#curriculo h2{
+    text-align: center;
+    color: #D45F68;
+    font-style: bold;
+    font-size: 42px;
+}
+
+#cards{
+    display: flex;
+    justify-content: space-around;
+}
+
+#curriculo .card{
+    width: 426px;
+    height: 521px;
+    margin-right: 27px;
+    background-color: rgb(211, 211, 211, 0.2);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#curriculo .card h3{
+    text-align: center;
+    color: #DB6247;
+    font-style: bold;
+    font-size: 36px;
+}
+
+#curriculo .card p{
+    text-align: center;
+    font-size: 28px;
+    color: #4B4B4B;
+}
+
+/* ## MERCADO ## */
+
+#mercado{
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+#mercado .container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#mercado h2{
+    text-align: center;
+    font-size: 42px;
+    color: #0074B9;
+}
+
+#mercado #mercado-div-imagem{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png");
+    background-size: cover;
+    width: 575px;
+    height: 377px;
+    border-radius: 5px;
+}
+
+#mercado #mercado-div-texto{
+    width: 706px;
+    height: 453px;
+    display: flex;
+    align-items: center;
+}
+
+#mercado #mercado-div-texto p{
+    text-align: right;
+    font-size: 24px;
+}
+
+/* ## PARTICIPE ## */
+
+#participe{
+    margin-top: 100px;
+}
+
+#participe h2{
+    color: #9D8C09;
+    font-size: 42px;
+    text-align: center;
+}
+
+#participe form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 71px;
+    width: 100%;
+    font-size: 20px;
+}
+
+input:focus{
+    outline: none;
+}
+
+select{
+    margin-bottom: 70px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#selects{
+    display: flex;
+}
+
+#selects div{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0px 50px;
+}
+
+button{
+    border-radius: 45px;
+    width: 478px;
+    padding: 35px 175px;
+    font-size: 22px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+hr{
+    margin-top: 100px;
+    margin-bottom: 35px;
+}
+
+/* ## FOOTER ## */
+
+#redes-sociais{
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+}
+
+#redes-sociais img{
+    width: 75px;
+    height: 75px;
+}
+
+footer p{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 24px;
+}
