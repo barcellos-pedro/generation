@@ -15,6 +15,7 @@ header{
     justify-content: space-around;
     align-items: center;
     margin-top: 22px;
+    margin-bottom: 30px;
 }
 
 header div img{
@@ -78,7 +79,6 @@ header #links a{
 }
 
 /* ## CURSO ## */
-
 #curso{
     margin-top: 0;
 }
@@ -132,7 +132,6 @@ iframe{
 }
 
 /* ## CURRICULO ## */
-
 #curriculo{
     margin-top: 100px;
 }
@@ -150,18 +149,20 @@ iframe{
 }
 
 #curriculo .card{
-    width: 426px;
-    height: 521px;
+    width: 326px;
+    height: 421px;
     margin-right: 27px;
     background-color: rgb(211, 211, 211, 0.2);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 0px 25px -15px;
 }
 
 #curriculo .card h3{
     text-align: center;
+    letter-spacing: 3px;
     color: #DB6247;
     font-style: bold;
     font-size: 36px;
@@ -174,7 +175,6 @@ iframe{
 }
 
 /* ## MERCADO ## */
-
 #mercado{
     margin-top: 100px;
     margin-bottom: 0;
@@ -213,7 +213,6 @@ iframe{
 }
 
 /* ## PARTICIPE ## */
-
 #participe{
     margin-top: 100px;
 }
@@ -225,6 +224,7 @@ iframe{
 }
 
 #participe form{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,7 +234,7 @@ iframe{
 label{
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    font-size: 36px;
+    font-size: 24px;
     margin-bottom: 70px;
     text-align: center;
 }
@@ -243,7 +243,7 @@ input{
     border: none;
     border-bottom: 1px solid black;
     margin-bottom: 71px;
-    width: 100%;
+    width: 70%;
     font-size: 20px;
 }
 
@@ -254,7 +254,7 @@ input:focus{
 select{
     margin-bottom: 70px;
     padding: 20px;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 5px;
 }
 
@@ -271,11 +271,21 @@ select{
 
 button{
     border-radius: 45px;
-    width: 478px;
-    padding: 35px 175px;
-    font-size: 22px;
+    width: 230px;
+    height: 70px;
+    font-size: 18px;
     background-color: #fff;
     cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    background-color: #000;
+    color: #fff;
+    border: none;
 }
 
 hr{
@@ -284,20 +294,20 @@ hr{
 }
 
 /* ## FOOTER ## */
-
 #redes-sociais{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: auto;
 }
 
 #redes-sociais img{
-    width: 75px;
-    height: 75px;
+    width: 35px;
+    height: 35px;
+    margin: 0 25px;
 }
 
 footer p{
     text-align: center;
     font-weight: lighter;
-    font-size: 24px;
+    font-size: 20px;
 }

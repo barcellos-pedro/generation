@@ -21,7 +21,7 @@
                 <li><a href="#curso">O curso</a></li>
                 <li><a href="#curriculo">Currículo do curso</a></li>
                 <li><a href="#mercado">Mercado de trabalho</a></li>
-                <li><a href="#participe">Participar</a></li>
+                <li><a href="#participe">Participe</a></li>
             </ul>
         </div>
     </header>
@@ -103,13 +103,13 @@
         <div class="container">
             <form action="#">
                 <label for="nome">Nome Completo</label>
-                <input type="text" id="nome">
+                <input type="text" id="nome" required>
 
                 <label for="email">E-mail</label>
-                <input type="email" id="email">
+                <input type="email" id="email" required>
 
                 <label for="data">Data de nascimento</label>
-                <input type="text" id="data">
+                <input type="date" name="data" id="data" style="text-align: center;">
 
                 <div id="selects">
                     <div>
@@ -147,7 +147,7 @@
                     </div>
 
                     <div>
-                        <label for="pequisa">Como soube da Generation</label>
+                        <label for="pequisa">Como soube da Generation?</label>
                         <select name="pesquisa" id="pesquisa">
                             <option value="facebook">Facebook</option>
                             <option value="linkedin">LinkedIn</option>
@@ -157,10 +157,9 @@
                         </select>
                     </div>
 
-
                 </div>
 
-                <button type="button">Enviar</button>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </section>
