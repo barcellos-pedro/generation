@@ -23,9 +23,9 @@
                     <div class="form-group m-0">
                         <label class="text-monospace" for="tema">Escolha um tema ou <a
                                 routerLink="/cadastrar-tema">Cadastre um novo</a></label>
-                        <select name="tema" id="tema" class="form-control">
-                            <option selected>
-                                Escolha...
+                        <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                            <option selected *ngFor='let item of listaTemas' value={{item.id}}>
+                                {{item.descricao}}
                             </option>
                         </select>
                     </div>
@@ -57,6 +57,29 @@
                         </div>
                         <div class="col-md-2 pl-0">
                             <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="card mt-5" *ngFor='let item of listaPostagens'>
+                                <div class="card-header">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-md-8">
+                                            <h5 class="card-title">{{item.tema.descricao}}</h5>
+                                            <small>Usuário: {{item.usuario.nome}}</small>
+                                        </div>
+                                        <div class="col-md-4 d-flex justify-content-end">
+                                            <button class="mr-3 btn btn-outline-info">Editar</button>
+                                            <button class="mr-3 btn btn-outline-danger">Apagar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
