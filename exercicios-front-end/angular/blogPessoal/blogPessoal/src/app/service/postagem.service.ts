@@ -29,4 +29,8 @@ export class PostagemService {
     return this.http.put('http://localhost:8080/postagens/atualizar-postagem', postagem, this.token);
   }
 
+  deletePostagem(id: number){
+    return this.http.delete(`http://localhost:8080/postagens/excluir-Postagem/${id}`, this.token);
+  }
+
 }
