@@ -25,4 +25,12 @@ export class TemaService {
     return this.http.post(`http://localhost:8080/temas/criar-tema`, tema, this.token);
   }
 
+  putTema(tema: Tema){
+    return this.http.put(`http://localhost:8080/temas/atualizar-tema`, tema, this.token);
+  }
+
+  deleteTema(id: number){
+    return this.http.delete(`http://localhost:8080/temas/excluir-tema/${id}`, this.token);
+  }
+
 }
