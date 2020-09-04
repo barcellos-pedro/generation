@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { OrderModule } from 'ngx-order-pipe';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,7 +43,8 @@ import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule,
-    OrderModule
+    OrderModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
