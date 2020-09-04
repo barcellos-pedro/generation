@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Tema } from '../model/Tema';
 import { TemaService } from '../service/tema.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-delete-tema',
@@ -12,7 +13,7 @@ export class DeleteTemaComponent implements OnInit {
 
   tema: Tema = new Tema();
 
-  constructor(private temaService: TemaService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private temaService: TemaService, private router: Router, private route: ActivatedRoute, private alert: AlertasService) { }
 
   ngOnInit() {
     window.scroll(0,0);
@@ -29,7 +30,7 @@ export class DeleteTemaComponent implements OnInit {
   btnSim() {
     this.temaService.deleteTema(this.tema.id).subscribe(() => {
       this.router.navigate(['cadastro-tema']);
-      alert("Tema apagado com sucesso");
+      this.alert.showAlertSuccess("Tema apagado com sucesso");
     })
   }
   

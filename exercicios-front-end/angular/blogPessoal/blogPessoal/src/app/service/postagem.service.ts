@@ -33,4 +33,8 @@ export class PostagemService {
     return this.http.delete(`http://localhost:8080/postagens/excluir-Postagem/${id}`, this.token);
   }
 
+  getByTituloPostagem(titulo: string){
+    return this.http.get(`http://localhost:8080/postagens/buscar-postagem/${titulo}`, this.token)
+  }
+
 }

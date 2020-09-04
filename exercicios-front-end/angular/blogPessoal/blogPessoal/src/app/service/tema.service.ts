@@ -33,4 +33,8 @@ export class TemaService {
     return this.http.delete(`http://localhost:8080/temas/excluir-tema/${id}`, this.token);
   }
 
+  getByDescricaoTema(descricao: string){
+    return this.http.get(`http://localhost:8080/temas/buscar-tema/${descricao}`, this.token)
+  }
+
 }
