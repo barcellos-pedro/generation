@@ -3,6 +3,7 @@ import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-feed',
@@ -21,7 +22,7 @@ export class FeedComponent implements OnInit {
   listaTemas: Tema[];
   idTema: number;
 
-  constructor(private postagemService: PostagemService, private temaService: TemaService) { }
+  constructor(private postagemService: PostagemService, private temaService: TemaService, private alert: AlertasService) { }
 
   ngOnInit() { //Assim que a página for carregada estas funçoões serão executadas
     window.scroll(0,0)
@@ -40,12 +41,12 @@ export class FeedComponent implements OnInit {
     this.postagem.tema = this.tema;
 
     if(this.postagem.titulo == null || this.postagem.descricao == null || this.postagem.tema == null) {
-      alert("Preencha todos os campos ante de publicar!");
+      this.alert.showAlertDanger("Preencha todos os campos ante de publicar!");
     } else{
       this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
         this.postagem = resp;
         this.postagem = new Postagem();
-        alert("Postagem realizada com sucesso");
+        this.alert.showAlertSuccess("Postagem realizada com sucesso");
         this.findAllPostagens();
       });
     }
