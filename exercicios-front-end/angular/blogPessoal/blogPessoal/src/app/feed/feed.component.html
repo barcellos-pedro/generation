@@ -61,7 +61,8 @@
                                 aria-label="Pesquisar" [(ngModel)]='titulo'>
                         </div>
                         <div class="col-md-2 pl-0">
-                            <button class="btn btn-outline-warning w-100" type="button" (click)='findByTituloPostagem()'>Pesquisar</button>
+                            <button class="btn btn-outline-warning w-100" type="button"
+                                (click)='findByTituloPostagem()'>Pesquisar</button>
                         </div>
                     </div>
 
@@ -76,8 +77,10 @@
                                             <small>Tema: {{item.tema.descricao}}</small>
                                         </div>
                                         <div class="col-md-4 d-flex justify-content-end">
-                                            <button class="mr-3 btn btn-outline-info" [routerLink]="['/editar-post', item.id]">Editar</button>
-                                            <button class="mr-3 btn btn-outline-danger" [routerLink]="['/deletar-post', item.id]">Apagar</button>
+                                            <button class="mr-3 btn btn-outline-info"
+                                                [routerLink]="['/editar-post', item.id]">Editar</button>
+                                            <button class="mr-3 btn btn-outline-danger"
+                                                [routerLink]="['/deletar-post', item.id]">Apagar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -87,6 +90,7 @@
                                         {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -95,12 +99,37 @@
                     <div class="row mt-3 mb-3">
                         <div class="col-md-10 pr-0">
                             <input class="form-control w-100" type="search" placeholder="Pesquisar tema"
-                                aria-label="Pesquisar">
+                                aria-label="Pesquisar" [(ngModel)]='descricaoTema'>
                         </div>
                         <div class="col-md-2 pl-0">
-                            <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                            <button class="btn btn-outline-warning w-100" type="button"
+                                (click)='findByDescricaoTema()'>Pesquisar</button>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-md-12" *ngFor='let tema of listaTemas | orderBy : key : reverse'>
+                            <div *ngFor='let post of tema.postagem'>
+                                <div class="card mt-5">
+                                    <div class="card-header">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-md-8">
+                                                <h5 class="card-title">{{post.titulo}}</h5>
+                                                <small>Tema: {{tema.descricao}}</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text" aria-describedby="texto">{{post.descricao}}</p>
+                                        <small id="texto" class="form-text" m-0 text-muted mb-3>Postado em:
+                                            {{post.data | date: 'dd/MM/yyyy'}} às {{post.data | date: 'HH:mm'}}</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
